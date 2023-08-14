@@ -25,7 +25,7 @@ function binarySearch(array, item) {
 }
 
 function recursionBinary(array, item, start, end) {
-       let middle = Math.floor((start + end) / 2);
+    let middle = Math.floor((start + end) / 2);
     count += 1;
     if (item === array[middle]) {
         return middle;
