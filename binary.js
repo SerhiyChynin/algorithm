@@ -24,5 +24,21 @@ function binarySearch(array, item) {
     return position;
 }
 
-console.log(binarySearch(array, 3));
+function recursionBinary(array, item, start, end) {
+       let middle = Math.floor((start + end) / 2);
+    count += 1;
+    if (item === array[middle]) {
+        return middle;
+    }
+    if (item < array[middle]) {
+        return recursionBinary(array, item,start, middle-1)
+    }
+    else {
+        return recursionBinary(array, item, middle+1, end)
+    }
+}
+
+console.log(recursionBinary(array, 4, 0, array.length));
+// console.log(binarySearch(array, 3));
 console.log(count);
+
